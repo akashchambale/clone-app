@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+        
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        .nav-bar {
+            background-color: burlywood;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-logo img {
+            margin-top: 3px;
+            margin-left: 5px;
+        }
+
+        .nav-items {
+            position: absolute;
+            right: 5px;
+        }
+
+
+        .nav-items a {
+            padding: 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .nav-items a:hover {
+            text-decoration: underline;
+            background-color: gray;
+            color: aqua;
+        }
+
+        .clothsection {
+            border: 3px black solid;
+            height: 770px;
+            width: 1200px;
+            margin: 110px;
+            background-image: linear-gradient(yellow, skyblue);
+        }
+
+        .box1 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            position: relative;
+            bottom: 0;
+            margin-left: 150px;
+            background-image: url("clothe1.jpg");
+            border-radius: 10px;
+        }
+
+        .box1:hover {
+            transform: scale(1.2);
+        }
+
+        .box2 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            margin: 80px;
+            background-image: url("https://m.media-amazon.com/images/I/91871rX4laL._AC_SY200_.jpg");
+            border-radius: 10px;
+        }
+
+        .box2:hover {
+            transform: scale(1.2);
+        }
+
+        .box3 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/img20/Events/Schoolfromhome/PCQC/Baby_wishlist._SY116_CB667649772_.jpg");
+            border-radius: 10px;
+        }
+
+        .box3:hover {
+            transform: scale(1.2);
+        }
+
+        .box4 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            background-image: url("https://m.media-amazon.com/images/I/41LMyE77gAL._AC_UL480_FMwebp_QL65_.jpg");
+            margin-left: 150px;
+            border-radius: 10px;
+            position: relative;
+            bottom: 25px;
+        }
+
+        .box4:hover {
+            transform: scale(1.2);
+        }
+
+        .box5 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            background-image: url("https://m.media-amazon.com/images/I/71X7pa5hBTL._AC_UL480_FMwebp_QL65_.jpg");
+            margin: 80px;
+            border-radius: 10px;
+            position: relative;
+            bottom: 25px;
+
+
+        }
+
+        .box5:hover {
+            transform: scale(1.2);
+        }
+
+        .box6 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            background-image: url("https://m.media-amazon.com/images/I/710+M61cX4L._AC_UL480_FMwebp_QL65_.jpg");
+            border-radius: 10px;
+            position: relative;
+            bottom: 25px;
+        }
+
+        .box6:hover {
+            transform: scale(1.2);
+        }
+
+        .Electronicsection {
+            border: 3px black solid;
+            height: 770px;
+            width: 1200px;
+            margin: 110px;
+            background-image: linear-gradient(brown, skyblue);
+        }
+
+        .ele1 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            margin-left: 150px;
+            position: relative;
+            top: 30px;
+            background-image: url("https://m.media-amazon.com/images/I/71L-lTQnJiL._AC_UL480_FMwebp_QL65_.jpg");
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .ele1:hover {
+            transform: scale(1.2);
+        }
+
+        .ele2 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            position: relative;
+            top: 30px;
+            background-image: url("https://m.media-amazon.com/images/I/51uVzVsKuZL._AC_UY327_FMwebp_QL65_.jpg");
+            display: inline-block;
+            margin: 80px;
+            border-radius: 10px;
+        }
+
+        .ele2:hover {
+            transform: scale(1.2);
+        }
+
+        .ele3 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            position: relative;
+            top: 30px;
+            background-image: url("https://m.media-amazon.com/images/I/61PTIycK+NL._AC_UY327_FMwebp_QL65_.jpg");
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .ele3:hover {
+            transform: scale(1.2);
+        }
+
+        .ele4 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            margin-left: 150px;
+            display: inline-block;
+            position: relative;
+            bottom: 30px;
+            background-image: url("https://m.media-amazon.com/images/I/71YrXoaSg7L._AC_SR180,120_QL70_.jpg");
+            border-radius: 10px;
+        }
+
+        .ele4:hover {
+            transform: scale(1.2);
+        }
+
+        .ele5 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            position: relative;
+            bottom: 30px;
+            margin: 80px;
+            background-image: url("https://m.media-amazon.com/images/I/61vm+ZZrC9L._AC_UY327_FMwebp_QL65_.jpg");
+            border-radius: 10px;
+        }
+
+        .ele5:hover {
+            transform: scale(1.2);
+        }
+
+        .ele6 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            border-radius: 10px;
+            display: inline-block;
+            position: relative;
+            bottom: 30px;
+            background-image: url("https://m.media-amazon.com/images/I/51tTUXxLNnL._AC_UY327_FMwebp_QL65_.jpg");
+        }
+
+        .ele6:hover {
+            transform: scale(1.2);
+        }
+
+        .accessoriessection {
+            border: 3px black solid;
+            height: 770px;
+            width: 1200px;
+            margin: 110px;
+            background-image: linear-gradient(pink, red);
+        }
+
+        .acc1 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            margin-left: 150px;
+            display: inline-block;
+            position: relative;
+            bottom: 70px;
+            border-radius: 10px;
+            background-image: url("acc1.jpg");
+        }
+
+        .acc1:hover {
+            transform: scale(1.2);
+        }
+
+        .acc2 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            margin: 80px;
+            position: relative;
+            top: 10px;
+            border-radius: 10px;
+            background-image: url("acc2.jpg");
+        }
+
+        .acc2:hover {
+            transform: scale(1.2);
+        }
+
+        .acc3 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            position: relative;
+            bottom: 70px;
+            border-radius: 10px;
+            background-image: url("acc3.jpg");
+        }
+
+        .acc3:hover {
+            transform: scale(1.2);
+        }
+
+        .acc4 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            margin-left: 150px;
+            position: relative;
+            bottom: 120px;
+            border-radius: 10px;
+            background-image: url("acc4.jpg");
+        }
+
+        .acc4:hover {
+            transform: scale(1.2);
+        }
+
+        .acc5 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            margin: 80px;
+            position: relative;
+            bottom: 40px;
+            border-radius: 10px;
+            background-image: url("acc5.jpg");
+        }
+
+        .acc5:hover {
+            transform: scale(1.2);
+        }
+
+        .acc6 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            position: relative;
+            bottom: 120px;
+            border-radius: 10px;
+            background-image: url("acc6.jpg");
+        }
+
+        .acc6:hover {
+            transform: scale(1.2);
+        }
+
+        .groceriessection {
+            border: 3px black solid;
+            height: 770px;
+            width: 1200px;
+            margin: 110px;
+            background-image: linear-gradient(orange, blue);
+        }
+
+        .groc1 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            margin-left: 150px;
+            position: relative;
+            bottom: 80px;
+            border-radius: 10px;
+            background-image: url("https://i.pinimg.com/736x/26/33/da/2633da06590d107e0ab30178022253f8--grocery-store-store-online.jpg");
+        }
+
+        .groc1:hover {
+            transform: scale(1.2);
+        }
+
+        .groc2 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            margin: 80px;
+            border-radius: 10px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiWBIP_sUwLWxmMvKZgFlzeITzgcRP3MkrvQ&usqp=CAU");
+        }
+
+        .groc2:hover {
+            transform: scale(1.2);
+        }
+
+        .groc3 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            position: relative;
+            bottom: 80px;
+            border-radius: 10px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1lFYZMXiEnCEqw1FFUDmOqRWqlNWQEDuCVo-__TQAJ-z04FMqIfA3K6QdkzxxSrMK2pk&usqp=CAU");
+        }
+
+        .groc3:hover {
+            transform: scale(1.2);
+        }
+
+        .groc4 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            margin-left: 150px;
+            display: inline-block;
+            position: relative;
+            bottom: 120px;
+            border-radius: 10px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQq0cJbo3IP5-LFo-SuQdvSilvbaZrpHm-jA&usqp=CAU");
+        }
+
+        .groc4:hover {
+            transform: scale(1.2);
+        }
+
+        .groc5 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            margin: 80px;
+            display: inline-block;
+            position: relative;
+            bottom: 40px;
+            border-radius: 10px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOAbep3GhZuzNH0JkLeXADWxt74echGV9QZQ&usqp=CAU");
+        }
+
+        .groc5:hover {
+            transform: scale(1.2);
+        }
+
+        .groc6 {
+            border: 2px black solid;
+            height: 210px;
+            width: 260px;
+            display: inline-block;
+            position: relative;
+            bottom: 120px;
+            border-radius: 10px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwTB6BbfRWN3RM5peks91X-QAL_ulEJyi75Q&usqp=CAU");
+        }
+
+        .groc6:hover {
+            transform: scale(1.2);
+        }
+    .carousel-slide{
+        margin-top: 80px;
+    }
+h1{
+    margin-top: 100px;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav bar starts -->
+    <div class="nav-bar">
+        <div class="nav-logo">
+            <img src="D:\css\Amazon-India-Logo-PNG-White.png" alt="" height="70px" width="150px">
+        </div>
+        <div class="nav-items">
+            <a href="">Home</a>
+            <a href="#cloth">clothes</a>
+            <a href="#Electronics">Electronics</a>
+            <a href="#Accessories">Accessories</a>
+            <a href="#Groceries">Groceries</a>
+            <a href="https://currentaffairs.adda247.com/jeff-bezos-amazon-company-becomes-the-first-company-in-history-to-lose-1-trillion-market-cap/" target="_blank">about</a>
+            <a href="https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fsign%2Fs%3Fk%3Dsign%2Bin%26ref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&" target="_blank">sign-in</a>
+        </div>
+    </div>
+    <!-- Nav bar ends -->
+    <!-- Carousel starts -->
+    <div id="carouselExampleSlidesOnly" class="carousel-slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="amazon2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="amazon4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="amazon3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel ends -->
+    <div class="clothsection" id="cloth">
+        <h1 align="center" style="color: yellow; background-color: brown;">clothes</h1>
+        <div class="box1">
+            <h2 align="center" style="color: red;">men's</h2>
+        </div>
+        <div class="box2">
+            <h2 align="center" style="color: red;">women's</h2>
+        </div>
+        <div class="box3">
+            <h2 align="center" style="color: red;">kid's</h2>
+        </div>
+        <div class="box4">
+            <h2 align="center" style="color: red;">Sharts</h2>
+        </div>
+        <div class="box5">
+            <h2 align="center" style="color: red;">T-sharts</h2>
+        </div>
+        <div class="box6">
+            <h2 align="center" style="color: red;">Formals</h2>
+        </div>
+    </div>
+    <div class="Electronicsection" id="Electronics">
+        <h1 align="center" style="color: yellow; background-color: yellowgreen">Electronics</h1>
+        <div class="ele1">
+            <h2 align="center" style="color: red;">TV</h2>
+        </div>
+        <div class="ele2">
+            <h2 align="center" style="color: red;">washingmachine</h2>
+        </div>
+        <div class="ele3">
+            <h2 align="center" style="color: red;">spekers</h2>
+        </div>
+        <div class="ele4">
+            <h2 align="center" style="color: red;">havel's</h2>
+        </div>
+        <div class="ele5">
+            <h2 align="center" style="color: red;">mobiles</h2>
+        </div>
+        <div class="ele6">
+            <h2 align="center" style="color: red;">smartbands</h2>
+        </div>
+    </div>
+    <div class="accessoriessection" id="Accessories">
+        <h1 align="center" style="color: yellow; background-color: yellowgreen;">Accessories</h1>
+        <div class="acc1"></div>
+        <div class="acc2"></div>
+        <div class="acc3"></div>
+        <div class="acc4"></div>
+        <div class="acc5"></div>
+        <div class="acc6"></div>
+    </div>
+    <div class="groceriessection" id="Groceries">
+        <h1 align="center" style="color: yellow; background-color: green;">Groceries</h1>
+        <div class="groc1"></div>
+        <div class="groc2"></div>
+        <div class="groc3"></div>
+        <div class="groc4"></div>
+        <div class="groc5"></div>
+        <div class="groc6"></div>
+    </div>
+    
+
+
+    
+
+
+
+</body>
+
+</html>
